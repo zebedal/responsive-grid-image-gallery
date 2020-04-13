@@ -1,0 +1,32 @@
+
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+@mixin small-screens{
+    @media only screen and(max-width: 480px) {
+        @content
+    }
+};
+@mixin medium-small-screens{
+    @media only screen and(min-width: 481px) and (max-width:780px){
+        @content
+    }
+};
+@mixin medium-screens{
+    @media only screen and(min-width: 481px) and (max-width: 920px){
+        @content
+    }
+};
+@mixin large-screens{
+    @media only screen and(min-width: 921px) and (max-width: 1200px){
+        @content
+    }
+};
+@mixin from-to($start, $end){
+    @media only screen and (min-width: $start) and(max-width: $end){
+        @content
+    }
+};
